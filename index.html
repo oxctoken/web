@@ -89,6 +89,26 @@ html, body {
     color: rgba(255,255,255,.65);
     text-shadow: 0 0 1px rgba(255,255,255,.75);
 }
+@keyframes shake-btn {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    20% {
+        transform: translate3d(5px,0,0);
+    }
+    40% {
+        transform: translate3d(10px,0,0);
+    }
+    60% {
+        transform: translate3d(15px,0,0);
+    }
+    80% {
+        transform: translate3d(10px,0,0);
+    }
+    100% {
+        transform: translate3d(0,0,0);
+    }
+}
 .left_wrap .btn_wrap {
     margin-top: 64px;
     display: flex;
@@ -113,6 +133,9 @@ html, body {
     border-color: transparent;
     opacity: .85;
     text-shadow: none;
+}
+.left_wrap .btn_wrap a.disable:active {
+    animation: shake-btn .1s ease-in;
 }
 .left_wrap .btn_wrap a:first-child {
     background: linear-gradient(135deg, #fa8b03 20%, #ff4300);
