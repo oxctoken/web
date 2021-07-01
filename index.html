@@ -89,11 +89,11 @@ html, body {
     color: rgba(255,255,255,.65);
     text-shadow: 0 0 1px rgba(255,255,255,.75);
 }
-.section_ox .body .left_wrap .btn_wrap {
+.left_wrap .btn_wrap {
     margin-top: 64px;
     display: flex;
 }
-.section_ox .body .left_wrap .btn_wrap a {
+.left_wrap .btn_wrap a {
     padding: 16px 32px;
     color: #fff;
     border-radius: 200px;
@@ -105,18 +105,24 @@ html, body {
     text-shadow: 0 0 2px rgba(0,0,0,.2);
     overflow: hidden;
 }
-.section_ox .body .left_wrap .btn_wrap a:first-child {
+.left_wrap .btn_wrap a.disable {
+    cursor: not-allowed;
+    background: rgba(0,0,0,.15);
+    border-color: transparent;
+    opacity: .5;
+}
+.left_wrap .btn_wrap a:first-child {
     background: linear-gradient(135deg, #fa8b03 20%, #ff4300);
     margin-right: 24px;
 }
-.section_ox .body .left_wrap .btn_wrap a:last-child {
+.left_wrap .btn_wrap a:last-child {
     border: solid 1px #f86c02;
 }
-.section_ox .body .left_wrap .btn_wrap a:last-child span {
+.left_wrap .btn_wrap a span {
     position: relative;
     z-index: 100;
 }
-.section_ox .body .left_wrap .btn_wrap a:last-child .btn_mask {
+.left_wrap .btn_wrap a .btn_mask {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -126,8 +132,11 @@ html, body {
     width: 100%;
     transition: height .15s ease-in;
 }
-.section_ox .body .left_wrap .btn_wrap a:last-child:hover .btn_mask {
+.left_wrap .btn_wrap a:hover .btn_mask {
     height: 100%;
+}
+.left_wrap .btn_wrap a.disable:hover .btn_mask {
+    height: 0;
 }
 
 /**
@@ -211,6 +220,10 @@ html, body {
             <div class="left_wrap">
                 <h2>How to Buy</h2>
                 <p>From its inception, Shiba Inu has done things differently. Starting with a supply of 1 quadrillion, our founder, Ryoshi, locked 50% in Uniswap, then “burned” the other half to Ethereum co-founder Vitalik Buterin for safekeeping.<br><br>From its inception, Shiba Inu has done things differently. Starting with a supply of 1 quadrillion, our founder, Ryoshi, locked 50% in Uniswap, then “burned” the other half to Ethereum co-founder Vitalik Buterin for safekeeping.</p>
+                <div class="btn_wrap">
+                    <a href="#buy">Buy OXC</a>
+                    <a href="#buy" class="disable"><span>Buy OXCT</span><div class="btn_mask"></div></a>
+                </div>
             </div>
         </div>
     </div>
