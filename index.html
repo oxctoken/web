@@ -264,17 +264,19 @@ html, body {
     z-index: 100;
 }
 .section_community .donation_box .btn .btn_mask {
+    border-radius: 200px;
     position: absolute;
     left: 0;
     bottom: 0;
     height: 0;
     background: var(--theme-third-color);
     z-index: 1;
-    width: 100%;
-    transition: height .15s ease-in;
+    width: 0;
+    height: 100%;
+    transition: width .15s ease-in;
 }
 .section_community .donation_box .btn:hover .btn_mask {
-    height: 100%;
+    width: 100%;
 }
 .section_footer {
     padding-top: 80px;
