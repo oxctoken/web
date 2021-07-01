@@ -91,22 +91,13 @@ html, body {
 }
 @keyframes shake-btn {
     0% {
+        transform: translate3d(-5px,0,0);
+    }
+    50% {
         transform: translate3d(0,0,0);
-    }
-    20% {
-        transform: translate3d(5px,0,0);
-    }
-    40% {
-        transform: translate3d(10px,0,0);
-    }
-    60% {
-        transform: translate3d(15px,0,0);
-    }
-    80% {
-        transform: translate3d(10px,0,0);
     }
     100% {
-        transform: translate3d(0,0,0);
+        transform: translate3d(5px,0,0);
     }
 }
 .left_wrap .btn_wrap {
@@ -127,9 +118,9 @@ html, body {
 }
 .left_wrap .btn_wrap a.disable {
     cursor: not-allowed;
-    color: rgba(255,255,255,.75);
-    background: rgba(0,0,0,.15);
-    border: solid 1px rgba(0,0,0, 0) !important;
+    color: rgba(230,230,230,.5);
+    background: rgba(0,0,0,.2);
+    border: solid 1px rgba(0,0,0,0) !important;
     border-color: transparent;
     opacity: .85;
     text-shadow: none;
