@@ -8,6 +8,9 @@
 <meta name="description" content="This is a defi token ecosystem. It not only has the property of investment, but also can be used for circulation and shopping">
 <link rel="icon" href="favicon.ico" type="image/ico"/>
 <style>
+:root {
+    --primary-color: #fab500;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -19,7 +22,7 @@ html, body {
 .section_ox {
     /* background: #e8a116; */
     /* background: linear-gradient(to bottom, #e8a116 40%, #faa116); */
-    background: radial-gradient(760px 760px at left bottom, #fff, #fab500);
+    background: radial-gradient(760px 760px at left bottom, #fff, var(--primary-color));
 }
 .section_ox .header {
     padding: 32px 48px 0 48px;
@@ -143,7 +146,7 @@ html, body {
     padding-bottom: 150px;
 }
 .section_block:nth-of-type(even) {
-    background: #f0f0f0;
+    background: var(--primary-color);
 }
 .section_block .left_wrap {
     max-width: 619px;
