@@ -10,6 +10,12 @@
 <style>
 :root {
     --primary-color: #fab500;
+
+    --theme-light-color: #ff4300;
+    --theme-primary-color: #CCFF66;
+    --theme-secondary-color: #990033;
+    --theme-third-color: #FF9900;
+
 }
 html, body {
     margin: 0;
@@ -179,7 +185,7 @@ html, body {
     max-width: 619px;
     margin-right: 60px;
 }
-.section_block .left_wrap h2 {
+.section_block .left_wrap h2, .section_block .main_wrap h2 {
     margin-top: 0px;
     margin-bottom: 32px;
     color: #fff;
@@ -192,6 +198,91 @@ html, body {
     line-height: 32px;
     font-size: 18px;
     /* text-shadow: 0 0 1px rgba(255,255,255,.75); */
+}
+.section_block .main_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.section_block .main_wrap p {
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255,255,255,.95);
+}
+.section_block .main_wrap p strong.light {
+    color: #ff3b00;
+}
+.section_community {
+    border-bottom: solid 1px #e8a116;
+    padding-bottom: 80px;
+}
+.section_community .donation_box {
+    margin: 40px auto 0 auto;
+    padding: 27px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 16px;
+    background: var(--theme-secondary-color);
+}
+.section_community .donation_box .address_box {
+    width: 388px;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0,0,0,.15);
+    overflow: hidden;
+}
+.section_community .donation_box .address_box .mask {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+
+    background: linear-gradient(to right, transparent, var(--theme-secondary-color) 85%);
+}
+.section_community .donation_box .btn {
+    border: solid 1px var(--theme-third-color);;
+    padding: 16px 32px;
+    color: #fff;
+    border-radius: 200px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 0 0 2px rgba(0,0,0,.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+.section_community .donation_box .btn span {
+    position: relative;
+    z-index: 100;
+}
+.section_community .donation_box .btn .btn_mask {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    background: var(--theme-third-color);
+    z-index: 1;
+    width: 100%;
+    transition: height .15s ease-in;
+}
+.section_community .donation_box .btn:hover .btn_mask {
+    height: 100%;
+}
+.section_footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: var(--primary-color);
+}
+.section_885 {
+    width: 885px;
+    margin: 0 auto;
 }
 </style>    
 </head>
@@ -260,8 +351,27 @@ html, body {
     </div>
     <div class="section_community section_block">
         <div class="section_1440">
-            <div class="left_wrap">
+            <div class="main_wrap">
                 <h2>Community</h2>
+                <p>If you'd like to donate to the <strong>Devs</strong>, send <strong class="light">ETH</strong>, <strong class="light">OXC</strong> or <strong class="light">OXCT</strong> here. Thank you for your support! MOO!</p>
+                <div class="donation_box">
+                    <div class="address_box">
+                        0x8dC3d76284f8b227227C998B176180058f37ae1F
+                        <div class="mask"></div>
+                    </div>
+                    <div class="btn">
+                        <span>Copy to clipboard</span>
+                        <div class="btn_mask"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section_footer section_block">
+        <div class="section_885">
+            <div class="main_wrap">
+               <p>Our community grows stronger every day. Please follow our social platforms to get the most up-to-date, accurate OXC information.</p>
+               <p>Using the links below, you can join our various groups alongside the 1M+ other members of the OxcArmy.</p>
             </div>
         </div>
     </div>
