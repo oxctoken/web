@@ -28,9 +28,13 @@ html, body {
 .section_ox {
     /* background: #e8a116; */
     /* background: linear-gradient(to bottom, #e8a116 40%, #faa116); */
-    background: radial-gradient(680px 680px at left bottom, #fff, var(--primary-color));
+    /*background: radial-gradient(680px 680px at left bottom, #fff, var(--primary-color));*/
+    background: rgb(11,5,65);
+    position: relative;
 }
 .section_ox .header {
+    position: relative;
+    z-index: 100;
     padding: 32px 48px 0 48px;
     display: flex;
     justify-content: space-between;
@@ -94,6 +98,13 @@ html, body {
 .section_ox .body .left_wrap p {
     color: rgba(255,255,255,.65);
     text-shadow: 0 0 1px rgba(255,255,255,.75);
+}
+.section_ox .body > img {
+    width: 880px;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    bottom: 0;
 }
 @keyframes shake-btn {
     0% {
